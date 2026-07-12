@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ExternalLink, MapPin, Pencil, Plus, Sparkles } from "lucide-react";
 import { DeleteWishlistButton } from "@/components/delete-wishlist-button";
 import { isLocale, type Locale } from "@/i18n/settings";
@@ -30,26 +31,40 @@ export default async function WishlistPage({ params }: Props) {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-14">
-      <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-        <div className="max-w-2xl">
-          <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-[#f6bd45] text-[#2c1c25]">
+      <section className="relative isolate overflow-hidden rounded-[1.5rem] shadow-2xl shadow-[#6d3d2f]/15 sm:rounded-[2rem]">
+        <Image
+          src="/images/wishlist-hero.png"
+          alt=""
+          fill
+          priority
+          className="object-cover"
+          sizes="(max-width: 1024px) 100vw, 1024px"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(34,17,18,0.82),rgba(61,26,23,0.48)_48%,rgba(61,26,23,0.08)),linear-gradient(0deg,rgba(34,17,18,0.42),transparent_58%)]" />
+        <div className="relative flex min-h-[22rem] flex-col justify-end px-6 py-8 sm:min-h-[27rem] sm:px-10 sm:py-10">
+          <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-[#f6bd45] text-[#2c1c25] shadow-lg shadow-black/15">
             <Sparkles size={21} aria-hidden="true" />
           </div>
-          <h1 className="text-balance-mobile text-3xl font-black text-[#2c1c25] sm:text-5xl">
+          <p className="section-kicker text-xs font-black uppercase text-[#ffe7a8]">
+            {messages.wishlist.kicker}
+          </p>
+          <h1 className="text-balance-mobile mt-3 max-w-2xl text-4xl font-black text-white drop-shadow-[0_4px_22px_rgba(25,12,10,0.45)] sm:text-6xl">
             {messages.wishlist.title}
           </h1>
-          <p className="mt-3 leading-7 text-[#654843]">{messages.wishlist.description}</p>
+          <p className="mt-3 max-w-xl text-base font-medium leading-7 text-[#fff7ec]">
+            {messages.wishlist.description}
+          </p>
+          {canEdit ? (
+            <Link
+              href={`/${locale}/wishlist/new`}
+              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#f6bd45] px-5 py-3 text-sm font-black text-[#2c1c25] shadow-lg shadow-black/20 transition hover:bg-[#ffd166] sm:w-fit"
+            >
+              <Plus size={17} aria-hidden="true" />
+              {messages.common.newWishlist}
+            </Link>
+          ) : null}
         </div>
-        {canEdit ? (
-          <Link
-            href={`/${locale}/wishlist/new`}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#e35f50] px-5 py-3 text-sm font-black text-white shadow-lg shadow-[#e35f50]/20 transition hover:bg-[#c94d41] sm:w-auto"
-          >
-            <Plus size={17} aria-hidden="true" />
-            {messages.common.newWishlist}
-          </Link>
-        ) : null}
-      </div>
+      </section>
 
       {places.data && places.data.length > 0 ? (
         <div className="mt-8 grid gap-4 sm:grid-cols-2">

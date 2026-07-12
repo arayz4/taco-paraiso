@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Plus } from "lucide-react";
 import { RestaurantCard } from "@/components/restaurant-card";
 import { isLocale, type Locale } from "@/i18n/settings";
@@ -34,34 +35,46 @@ export default async function RestaurantsPage({ params, searchParams }: Props) {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-14">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <p className="section-kicker text-xs font-black uppercase text-[#9d433c]">Taco log</p>
-          <h1 className="mt-2 text-3xl font-black text-[#2c1c25] sm:text-4xl">
+      <section className="relative isolate overflow-hidden rounded-[1.5rem] shadow-2xl shadow-[#6d3d2f]/15 sm:rounded-[2rem]">
+        <Image
+          src="/images/taco-log-hero.png"
+          alt=""
+          fill
+          priority
+          className="object-cover"
+          sizes="(max-width: 1024px) 100vw, 1024px"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(34,17,18,0.86),rgba(61,26,23,0.55)_48%,rgba(61,26,23,0.12)),linear-gradient(0deg,rgba(34,17,18,0.45),transparent_58%)]" />
+        <div className="relative flex min-h-[22rem] flex-col justify-end px-6 py-8 sm:min-h-[27rem] sm:px-10 sm:py-10">
+          <p className="section-kicker text-xs font-black uppercase text-[#ffe7a8]">
+            {messages.restaurants.kicker}
+          </p>
+          <h1 className="text-balance-mobile mt-3 max-w-2xl text-4xl font-black text-white drop-shadow-[0_4px_22px_rgba(25,12,10,0.45)] sm:text-6xl">
             {messages.restaurants.title}
           </h1>
-          <div className="mt-4 flex flex-wrap gap-2">
-            <SortLink locale={locale} active={sort !== "rating"} href={`/${locale}/restaurants`}>
-              {messages.restaurants.sortNewest}
-            </SortLink>
-            <SortLink
-              locale={locale}
-              active={sort === "rating"}
-              href={`/${locale}/restaurants?sort=rating`}
+          {canEdit ? (
+            <Link
+              href={`/${locale}/restaurants/new`}
+              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#f6bd45] px-5 py-3 text-sm font-black text-[#2c1c25] shadow-lg shadow-black/20 transition hover:bg-[#ffd166] sm:w-fit"
             >
-              {messages.restaurants.sortRating}
-            </SortLink>
-          </div>
+              <Plus size={16} aria-hidden="true" />
+              {messages.common.newRestaurant}
+            </Link>
+          ) : null}
         </div>
-        {canEdit ? (
-          <Link
-            href={`/${locale}/restaurants/new`}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#e35f50] px-5 py-3 text-sm font-black text-white shadow-lg shadow-[#e35f50]/25 transition hover:bg-[#c94d41] sm:w-auto"
-          >
-            <Plus size={16} aria-hidden="true" />
-            {messages.common.newRestaurant}
-          </Link>
-        ) : null}
+      </section>
+
+      <div className="mt-6 flex flex-wrap gap-2">
+        <SortLink locale={locale} active={sort !== "rating"} href={`/${locale}/restaurants`}>
+          {messages.restaurants.sortNewest}
+        </SortLink>
+        <SortLink
+          locale={locale}
+          active={sort === "rating"}
+          href={`/${locale}/restaurants?sort=rating`}
+        >
+          {messages.restaurants.sortRating}
+        </SortLink>
       </div>
 
       {restaurants.data && restaurants.data.length > 0 ? (
