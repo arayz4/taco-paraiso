@@ -31,62 +31,51 @@ export default async function HomePage({ params }: Props) {
     : { data: [] as Restaurant[] };
 
   return (
-    <div className="mx-auto max-w-5xl px-3 py-7 sm:px-4 sm:py-14">
-      <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-        <div className="space-y-5">
-          <div className="inline-flex rounded-full border border-[#ffc83d]/70 bg-[#fff2b8] px-3 py-1 text-sm font-black text-[#78313f] shadow-sm">
+    <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-10">
+      <section className="hero-photo relative isolate overflow-hidden rounded-[1.5rem] sm:rounded-[2rem]">
+        <div className="hero-photo-overlay absolute inset-0" />
+        <div className="relative flex min-h-[30rem] max-w-xl flex-col justify-end px-6 py-8 sm:min-h-[36rem] sm:px-10 sm:py-12 lg:min-h-[38rem] lg:px-14 lg:py-16">
+          <div className="space-y-6">
+            <div className="section-kicker inline-flex border-b-2 border-[#f6bd45] pb-1 text-xs font-black uppercase text-[#fff5df]">
             {messages.home.badge}
-          </div>
-          <div className="space-y-4">
-            <h1 className="text-balance-mobile max-w-2xl text-4xl font-black tracking-tight text-[#241326] drop-shadow-sm sm:text-7xl">
+            </div>
+            <div className="space-y-4">
+              <h1 className="text-balance-mobile max-w-2xl text-5xl font-black tracking-tight text-white drop-shadow-[0_4px_22px_rgba(25,12,10,0.45)] sm:text-7xl">
               {siteConfig.titles[locale]}
-            </h1>
-            <p className="max-w-xl text-base font-medium leading-7 text-[#56384f] sm:text-lg sm:leading-8">
+              </h1>
+              <p className="max-w-xl text-base font-medium leading-7 text-[#fff7ec] sm:text-lg sm:leading-8">
               {messages.home.description}
-            </p>
-          </div>
-          <div className="flex flex-col gap-3 min-[420px]:flex-row">
-            <Link
-              href={`/${locale}/restaurants`}
-              className="rounded-full bg-[#0b8d88] px-5 py-3 text-center text-sm font-black text-white shadow-lg shadow-[#0b8d88]/25 transition hover:bg-[#08736f]"
-            >
-              {messages.home.viewAll}
-            </Link>
-            {canEdit ? (
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 min-[420px]:flex-row">
               <Link
-                href={`/${locale}/restaurants/new`}
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#ff5a72]/25 bg-white px-5 py-3 text-sm font-black text-[#8c3a54] shadow-sm transition hover:bg-[#fff1f3]"
+                href={`/${locale}/restaurants`}
+                className="rounded-full bg-[#f6bd45] px-5 py-3 text-center text-sm font-black text-[#2c1c25] shadow-lg shadow-black/20 transition hover:bg-[#ffd166]"
               >
-                <Plus size={16} aria-hidden="true" />
-                {messages.common.newRestaurant}
+                {messages.home.viewAll}
               </Link>
-            ) : null}
-          </div>
-        </div>
-        <div className="relative min-h-64 overflow-hidden rounded-lg border-2 border-[#241326]/10 bg-[#2a1740] p-4 shadow-2xl shadow-[#4c245c]/20 sm:min-h-72 sm:p-6">
-          <div className="absolute -right-12 -top-10 h-40 w-40 rounded-full bg-[#ffc83d]" />
-          <div className="absolute bottom-6 right-10 h-24 w-24 rounded-full bg-[#ff5a72]" />
-          <div className="absolute left-7 top-8 h-16 w-16 rounded-full flower-dot" />
-          <div className="absolute inset-x-0 top-0 h-7 bg-[linear-gradient(90deg,#ff5a72_0_16.66%,#ffc83d_16.66%_33.33%,#12a6a2_33.33%_50%,#7b3fb5_50%_66.66%,#f36a2d_66.66%_83.33%,#21b574_83.33%_100%)]" />
-          <div className="relative flex h-full min-h-56 flex-col justify-end rounded-lg border border-white/20 bg-white/10 p-4 backdrop-blur-sm sm:min-h-64 sm:p-5">
-            <p className="text-xs font-black uppercase tracking-[0.16em] text-[#ffc83d] sm:text-sm sm:tracking-[0.2em]">
-              Al pastor / Carnitas / Barbacoa
-            </p>
-            <p className="mt-3 max-w-sm text-2xl font-black text-[#fff6df] sm:text-3xl">
-              {messages.home.heroNote}
-            </p>
+              {canEdit ? (
+                <Link
+                  href={`/${locale}/restaurants/new`}
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/15 px-5 py-3 text-sm font-black text-white shadow-sm backdrop-blur-sm transition hover:bg-white/25"
+                >
+                  <Plus size={16} aria-hidden="true" />
+                  {messages.common.newRestaurant}
+                </Link>
+              ) : null}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="mt-10 space-y-5 sm:mt-14">
+      <section className="mt-14 space-y-6 sm:mt-20">
         <div className="flex items-center justify-between gap-3">
-          <h2 className="text-2xl font-black text-[#241326]">
+          <h2 className="text-2xl font-black text-[#2c1c25]">
             {messages.home.recent}
           </h2>
           <Link
             href={`/${locale}/restaurants`}
-            className="text-sm font-black text-[#0b8d88] hover:text-[#075f5b]"
+            className="text-sm font-black text-[#277c70] hover:text-[#1d665c]"
           >
             {messages.home.viewAll}
           </Link>
@@ -103,7 +92,7 @@ export default async function HomePage({ params }: Props) {
             ))}
           </div>
         ) : (
-          <p className="fiesta-card rounded-lg p-6 font-semibold text-[#56384f]">
+          <p className="fiesta-card rounded-[1rem] p-6 font-semibold text-[#654843]">
             {messages.home.empty}
           </p>
         )}

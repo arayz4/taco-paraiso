@@ -33,10 +33,11 @@ export default async function RestaurantsPage({ params, searchParams }: Props) {
     : { data: [] as Restaurant[] };
 
   return (
-    <div className="mx-auto max-w-5xl px-3 py-7 sm:px-4 sm:py-10">
+    <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-14">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="text-3xl font-black text-[#241326] sm:text-4xl">
+          <p className="section-kicker text-xs font-black uppercase text-[#9d433c]">Taco log</p>
+          <h1 className="mt-2 text-3xl font-black text-[#2c1c25] sm:text-4xl">
             {messages.restaurants.title}
           </h1>
           <div className="mt-4 flex flex-wrap gap-2">
@@ -55,7 +56,7 @@ export default async function RestaurantsPage({ params, searchParams }: Props) {
         {canEdit ? (
           <Link
             href={`/${locale}/restaurants/new`}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#ff5a72] px-5 py-3 text-sm font-black text-white shadow-lg shadow-[#ff5a72]/25 transition hover:bg-[#e94862] sm:w-auto"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#e35f50] px-5 py-3 text-sm font-black text-white shadow-lg shadow-[#e35f50]/25 transition hover:bg-[#c94d41] sm:w-auto"
           >
             <Plus size={16} aria-hidden="true" />
             {messages.common.newRestaurant}
@@ -75,7 +76,7 @@ export default async function RestaurantsPage({ params, searchParams }: Props) {
           ))}
         </div>
       ) : (
-        <p className="fiesta-card mt-6 rounded-lg p-6 font-semibold text-[#56384f]">
+        <p className="fiesta-card mt-6 rounded-[1rem] p-6 font-semibold text-[#654843]">
           {messages.restaurants.empty}
         </p>
       )}
@@ -98,8 +99,8 @@ function SortLink({
       href={href}
       className={`rounded-full px-4 py-2 text-sm font-bold transition ${
         active
-          ? "bg-[#0b8d88] text-white shadow-md shadow-[#0b8d88]/20"
-          : "border border-[#ffc83d]/50 bg-white text-[#78313f] hover:bg-[#fff2b8]"
+          ? "bg-[#277c70] text-white shadow-md shadow-[#277c70]/20"
+          : "border border-[#3c2b2b]/10 bg-white/75 text-[#654843] hover:bg-[#fff2e8]"
       }`}
     >
       {children}

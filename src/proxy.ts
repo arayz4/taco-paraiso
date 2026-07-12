@@ -7,6 +7,7 @@ export function proxy(request: NextRequest) {
 
   if (
     pathname.startsWith("/_next") ||
+    pathname.startsWith("/images/") ||
     pathname.startsWith("/favicon.ico") ||
     pathname.startsWith("/robots.txt")
   ) {

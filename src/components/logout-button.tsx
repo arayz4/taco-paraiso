@@ -13,7 +13,7 @@ export function LogoutButton({ action, messages }: Props) {
     <form action={action}>
       <button
         type="submit"
-        className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-2 text-sm font-semibold text-[#fff6df] shadow-sm transition hover:bg-white/15 sm:min-h-0 sm:px-4"
+        className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#3c2b2b]/15 bg-white px-3 py-2 text-sm font-semibold text-[#3c2b2b] shadow-sm transition hover:bg-[#fff3e8] sm:min-h-0 sm:px-4"
       >
         <LogOut size={16} aria-hidden="true" />
         {messages.common.logout}
