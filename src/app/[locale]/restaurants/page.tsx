@@ -41,10 +41,10 @@ export default async function RestaurantsPage({ params, searchParams }: Props) {
           alt=""
           fill
           priority
-          className="object-cover"
+          className="object-cover brightness-110 saturate-125"
           sizes="(max-width: 1024px) 100vw, 1024px"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(34,17,18,0.86),rgba(61,26,23,0.55)_48%,rgba(61,26,23,0.12)),linear-gradient(0deg,rgba(34,17,18,0.45),transparent_58%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(34,17,18,0.62),rgba(61,26,23,0.32)_46%,rgba(61,26,23,0.02)),linear-gradient(0deg,rgba(34,17,18,0.24),transparent_58%)]" />
         <div className="relative flex min-h-[22rem] flex-col justify-end px-6 py-8 sm:min-h-[27rem] sm:px-10 sm:py-10">
           <p className="section-kicker text-xs font-black uppercase text-[#ffe7a8]">
             {messages.restaurants.kicker}

@@ -37,10 +37,10 @@ export default async function WishlistPage({ params }: Props) {
           alt=""
           fill
           priority
-          className="object-cover"
+          className="object-cover brightness-110 saturate-125"
           sizes="(max-width: 1024px) 100vw, 1024px"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(34,17,18,0.82),rgba(61,26,23,0.48)_48%,rgba(61,26,23,0.08)),linear-gradient(0deg,rgba(34,17,18,0.42),transparent_58%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(34,17,18,0.6),rgba(61,26,23,0.28)_46%,rgba(61,26,23,0.02)),linear-gradient(0deg,rgba(34,17,18,0.22),transparent_58%)]" />
         <div className="relative flex min-h-[22rem] flex-col justify-end px-6 py-8 sm:min-h-[27rem] sm:px-10 sm:py-10">
           <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-[#f6bd45] text-[#2c1c25] shadow-lg shadow-black/15">
             <Sparkles size={21} aria-hidden="true" />

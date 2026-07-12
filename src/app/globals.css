@@ -92,8 +92,8 @@ select {
 
 .hero-photo-overlay {
   background:
-    linear-gradient(90deg, rgba(31, 15, 13, 0.88) 0%, rgba(48, 21, 17, 0.74) 39%, rgba(48, 21, 17, 0.24) 66%, rgba(48, 21, 17, 0.04) 100%),
-    linear-gradient(0deg, rgba(31, 15, 13, 0.42), transparent 54%);
+    linear-gradient(90deg, rgba(31, 15, 13, 0.66) 0%, rgba(48, 21, 17, 0.45) 39%, rgba(48, 21, 17, 0.1) 66%, rgba(48, 21, 17, 0.01) 100%),
+    linear-gradient(0deg, rgba(31, 15, 13, 0.24), transparent 54%);
 }
 
 @media (max-width: 639px) {
@@ -103,8 +103,8 @@ select {
 
   .hero-photo-overlay {
     background:
-      linear-gradient(0deg, rgba(31, 15, 13, 0.78) 0%, rgba(31, 15, 13, 0.5) 48%, rgba(31, 15, 13, 0.12) 100%),
-      linear-gradient(90deg, rgba(31, 15, 13, 0.28), rgba(31, 15, 13, 0.02));
+      linear-gradient(0deg, rgba(31, 15, 13, 0.64) 0%, rgba(31, 15, 13, 0.34) 48%, rgba(31, 15, 13, 0.05) 100%),
+      linear-gradient(90deg, rgba(31, 15, 13, 0.18), rgba(31, 15, 13, 0.01));
   }
 }
 
