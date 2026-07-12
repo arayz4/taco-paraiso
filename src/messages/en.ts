@@ -37,9 +37,9 @@ export const en = {
     members: [
       {
         name: "Josh",
-        role: "Taco diplomacy",
+        role: "President of Tacos",
         favorite: "Lively rooms, good meat, easy energy",
-        note: "Can make a first visit feel familiar almost immediately.",
+        note: "Chief Paraíso officer. Can make a first visit feel familiar almost immediately.",
       },
       {
         name: "Chris",
