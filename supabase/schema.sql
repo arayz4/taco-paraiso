@@ -28,8 +28,22 @@ create table if not exists public.restaurants (
   updated_at timestamptz not null default now()
 );
 
+create table if not exists public.places_to_try (
+  id uuid primary key default gen_random_uuid(),
+  name text not null,
+  name_en text,
+  area text not null,
+  note text,
+  note_en text,
+  google_maps_url text,
+  created_by uuid not null references public.profiles(id) on delete restrict,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
 create index if not exists restaurants_created_at_idx on public.restaurants(created_at desc);
 create index if not exists restaurants_rating_idx on public.restaurants(rating desc);
+create index if not exists places_to_try_created_at_idx on public.places_to_try(created_at desc);
 
 alter table public.restaurants
   add column if not exists atmosphere_rating integer check (atmosphere_rating between 1 and 5);
@@ -50,6 +64,11 @@ $$;
 drop trigger if exists set_restaurants_updated_at on public.restaurants;
 create trigger set_restaurants_updated_at
 before update on public.restaurants
+for each row execute function public.set_updated_at();
+
+drop trigger if exists set_places_to_try_updated_at on public.places_to_try;
+create trigger set_places_to_try_updated_at
+before update on public.places_to_try
 for each row execute function public.set_updated_at();
 
 create or replace function public.handle_new_user()
@@ -107,6 +126,7 @@ $$;
 
 alter table public.profiles enable row level security;
 alter table public.restaurants enable row level security;
+alter table public.places_to_try enable row level security;
 
 drop policy if exists "Profiles are readable by everyone" on public.profiles;
 create policy "Profiles are readable by everyone"
@@ -150,6 +170,30 @@ with check (public.is_editor());
 drop policy if exists "Editors can delete restaurants" on public.restaurants;
 create policy "Editors can delete restaurants"
 on public.restaurants for delete
+to authenticated
+using (public.is_editor());
+
+drop policy if exists "Places to try are readable by everyone" on public.places_to_try;
+create policy "Places to try are readable by everyone"
+on public.places_to_try for select
+using (true);
+
+drop policy if exists "Editors can insert places to try" on public.places_to_try;
+create policy "Editors can insert places to try"
+on public.places_to_try for insert
+to authenticated
+with check (public.is_editor() and created_by = auth.uid());
+
+drop policy if exists "Editors can update places to try" on public.places_to_try;
+create policy "Editors can update places to try"
+on public.places_to_try for update
+to authenticated
+using (public.is_editor())
+with check (public.is_editor());
+
+drop policy if exists "Editors can delete places to try" on public.places_to_try;
+create policy "Editors can delete places to try"
+on public.places_to_try for delete
 to authenticated
 using (public.is_editor());
 

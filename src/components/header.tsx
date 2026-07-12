@@ -37,6 +37,12 @@ export function Header({ locale, messages, profile, canEdit }: Props) {
           >
             {messages.common.restaurants}
           </Link>
+          <Link
+            href={`/${locale}/wishlist`}
+            className="flex min-h-11 items-center justify-center rounded-full px-3 py-2 text-center text-sm font-semibold text-[#3c2b2b] transition hover:bg-[#f3e6d8] sm:min-h-0 sm:px-4"
+          >
+            {messages.common.wishlist}
+          </Link>
           {canEdit ? (
             <Link
               href={`/${locale}/restaurants/new`}

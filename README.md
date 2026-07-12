@@ -1,6 +1,6 @@
 # TACOS PARAÍSO / タコパライソ
 
-A small Next.js record site for Mexican taco restaurants. Public visitors can view records; only pre-approved Supabase users with `editor` or `admin` roles can create, edit, delete, and upload photos.
+A small Next.js record site for Mexican taco restaurants. Public visitors can view visited restaurants and the places-to-try list; only pre-approved Supabase users with `editor` or `admin` roles can create, edit, delete, and upload photos.
 
 ## Stack
 
@@ -29,7 +29,7 @@ Do not expose Supabase service-role keys in this app.
 4. Confirm that the public Storage bucket `restaurant-photos` exists.
 5. In Authentication settings, keep public sign-up disabled for this app flow.
 
-If the database already exists, run the same SQL again. It includes `alter table ... add column if not exists` for newer fields such as atmosphere rating and scene tags.
+If the database already exists, run the same SQL again. It safely adds newer fields and the `places_to_try` table used by the wishlist.
 
 ## Create the First Posting User
 
@@ -57,7 +57,7 @@ Open `http://localhost:3000`. The root redirects to `/ja` by default. Use the he
 2. Import it into Vercel as a Next.js project.
 3. Add the two environment variables from `.env.example`.
 4. Deploy.
-5. After deployment, confirm `/ja`, `/en`, `/ja/restaurants`, and `/en/restaurants`.
+5. After deployment, confirm `/ja`, `/en`, `/ja/restaurants`, `/en/restaurants`, `/ja/wishlist`, and `/en/wishlist`.
 
 ## Search Engine Blocking
 
@@ -73,10 +73,12 @@ This discourages indexing. It is not access control; anyone with the URL can vie
 
 - `/ja` and `/en` render and keep the same page when switching languages.
 - Public visitors can view the home page, restaurant list, details, and photos.
+- Public visitors can view the places-to-try list.
 - Public visitors cannot see create, edit, or delete controls.
 - Login works only for Supabase-created users.
 - Users with `viewer` role cannot create, edit, delete, or upload.
 - Users with `editor` or `admin` role can create, edit, delete, and upload.
+- Users with `editor` or `admin` role can manage the places-to-try list.
 - Image upload rejects unsupported file types and files over 5 MB.
 - Google Maps URL validation rejects invalid URLs.
 - `robots.txt` is available and blocks crawling.

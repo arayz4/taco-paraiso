@@ -39,3 +39,16 @@ export type RestaurantInput = {
   google_maps_url?: string | null;
   image_url?: string | null;
 };
+
+export type PlaceToTry = {
+  id: string;
+  name: string;
+  name_en: string | null;
+  area: string;
+  note: string | null;
+  note_en: string | null;
+  google_maps_url: string | null;
+  created_by: string;
+  created_at: string;
+  updated_at: string;
+};

@@ -42,4 +42,27 @@ export const restaurantSchema = z.object({
 
 export type RestaurantFormValues = z.infer<typeof restaurantSchema>;
 
+export const placeToTrySchema = z.object({
+  name: z.string().trim().min(1).max(120),
+  name_en: z
+    .string()
+    .trim()
+    .optional()
+    .transform((value) => value || null),
+  area: z.string().trim().min(1).max(120),
+  note: z
+    .string()
+    .trim()
+    .max(500)
+    .optional()
+    .transform((value) => value || null),
+  note_en: z
+    .string()
+    .trim()
+    .max(500)
+    .optional()
+    .transform((value) => value || null),
+  google_maps_url: optionalUrl,
+});
+
 export const allowedImageTypes = ["image/jpeg", "image/png", "image/webp"];
