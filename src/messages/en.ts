@@ -20,7 +20,7 @@ export const en = {
     required: "Required",
   },
   home: {
-    badge: "Mexican tacos notebook",
+    badge: "TACOS PARAÍSO JOURNAL",
     heroNote: "Small notes, big tortillas.",
     description:
       "A small shared notebook for you and a few friends to record Mexican taco spots.",

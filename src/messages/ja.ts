@@ -20,7 +20,7 @@ export const ja = {
     required: "必須",
   },
   home: {
-    badge: "メキシカンタコス記録",
+    badge: "TACOS PARAÍSO JOURNAL",
     heroNote: "小さな記録、大きなトルティーヤ。",
     description:
       "自分と知人だけでメキシカンタコスの店を気軽に記録する、小さな共有ノートです。",
