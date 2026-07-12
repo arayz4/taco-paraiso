@@ -29,7 +29,7 @@ export const ja = {
     empty: "まだ食べたお店が登録されていません。",
   },
   restaurants: {
-    kicker: "食べた記録",
+    kicker: "おいしい記憶",
     title: "食べたお店",
     sortNewest: "新着順",
     sortRating: "評価順",

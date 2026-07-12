@@ -29,7 +29,7 @@ export const en = {
     empty: "No visited places have been added yet.",
   },
   restaurants: {
-    kicker: "Eaten and noted",
+    kicker: "Field Notes",
     title: "Visited Places",
     sortNewest: "Newest",
     sortRating: "Top rated",
