@@ -5,6 +5,7 @@ export const en = {
     languageEn: "English",
     restaurants: "Visited Places",
     wishlist: "Want to Visit",
+    members: "Taco Board",
     newWishlist: "Add a place",
     newRestaurant: "Add a place",
     login: "Log in",
@@ -24,16 +25,14 @@ export const en = {
     heroNote: "Taco encounters, lightly logged.",
     description:
       "A small inner-circle log for taco places worth remembering.",
-    membersLink: "Meet the circle",
-    membersText: "A quiet little intro to the people behind this log.",
     recent: "Recently visited",
     viewAll: "View visited places",
     empty: "No visited places have been added yet.",
   },
   members: {
-    kicker: "INNER CIRCLE",
-    title: "The Circle",
-    description: "Around five taco people keeping Tacos Paraíso alive, softly and casually.",
+    kicker: "PARAÍSO BOARD",
+    title: "Taco Board",
+    description: "A loose inner-circle roster. The titles are mostly vibes.",
     favoriteLabel: "Their lane",
     members: [
       {

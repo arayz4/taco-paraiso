@@ -5,6 +5,7 @@ export const ja = {
     languageEn: "English",
     restaurants: "食べたお店",
     wishlist: "行きたいお店",
+    members: "タコス役員",
     newWishlist: "行きたいお店を追加",
     newRestaurant: "お店を追加",
     login: "ログイン",
@@ -24,16 +25,14 @@ export const ja = {
     heroNote: "Taco encounters, lightly logged.",
     description:
       "仲間内で、タコスに出会ったお店をゆるく残していく、めもめもめもりー。",
-    membersLink: "仲間を見る",
-    membersText: "このログを育てている小さなメンバー紹介。",
     recent: "最近食べたお店",
     viewAll: "食べたお店を見る",
     empty: "まだ食べたお店が登録されていません。",
   },
   members: {
-    kicker: "INNER CIRCLE",
-    title: "仲間たち",
-    description: "タコパライソを一緒に育てる、だいたい5人くらいのタコス好き。",
+    kicker: "PARAÍSO BOARD",
+    title: "タコス役員",
+    description: "仲間内のゆるい役員名簿。肩書きはだいたい気分です。",
     favoriteLabel: "好きな感じ",
     members: [
       {
