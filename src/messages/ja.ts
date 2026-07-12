@@ -23,7 +23,7 @@ export const ja = {
     badge: "TACOS PARAÍSO JOURNAL",
     heroNote: "Taco encounters, lightly logged.",
     description:
-      "タコスに出会ったお店を、好きな人たちだけで残していく小さなログ。",
+      "仲間内だけで、タコスに出会ったお店をゆるく残していく小さなログ。",
     recent: "最近食べたお店",
     viewAll: "食べたお店を見る",
     empty: "まだ食べたお店が登録されていません。",

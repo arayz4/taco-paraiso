@@ -23,7 +23,7 @@ export const en = {
     badge: "TACOS PARAÍSO JOURNAL",
     heroNote: "Taco encounters, lightly logged.",
     description:
-      "A small private log for taco places you and your people want to remember.",
+      "A small inner-circle log for taco places worth remembering.",
     recent: "Recently visited",
     viewAll: "View visited places",
     empty: "No visited places have been added yet.",
