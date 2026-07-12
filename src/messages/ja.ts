@@ -6,7 +6,7 @@ export const ja = {
     restaurants: "食べたお店",
     wishlist: "行きたいお店",
     newWishlist: "行きたいお店を追加",
-    newRestaurant: "食べたタコスを記録",
+    newRestaurant: "お店を追加",
     login: "ログイン",
     logout: "ログアウト",
     edit: "編集",
@@ -21,15 +21,15 @@ export const ja = {
   },
   home: {
     badge: "TACOS PARAÍSO JOURNAL",
-    heroNote: "小さな記録、大きなトルティーヤ。",
+    heroNote: "Taco encounters, lightly logged.",
     description:
-      "自分と知人だけでメキシカンタコスの店を気軽に記録する、小さな共有ノートです。",
+      "タコスに出会ったお店を、好きな人たちだけで残していく小さなログ。",
     recent: "最近食べたお店",
     viewAll: "食べたお店を見る",
     empty: "まだ食べたお店が登録されていません。",
   },
   restaurants: {
-    kicker: "おいしい記憶",
+    kicker: "TACO ENCOUNTERS",
     title: "食べたお店",
     sortNewest: "新着順",
     sortRating: "評価順",
@@ -55,7 +55,7 @@ export const ja = {
     deleteConfirm: "この店舗記録を削除しますか？",
   },
   wishlist: {
-    kicker: "次のタコス旅",
+    kicker: "NEXT TACO STOP",
     title: "行きたいお店",
     description: "次に食べに行きたいお店の候補を、軽くメモしておく場所です。",
     empty: "行きたいお店はまだ登録されていません。",

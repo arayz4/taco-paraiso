@@ -6,7 +6,7 @@ export const en = {
     restaurants: "Visited Places",
     wishlist: "Want to Visit",
     newWishlist: "Add a place",
-    newRestaurant: "Log tacos",
+    newRestaurant: "Add a place",
     login: "Log in",
     logout: "Log out",
     edit: "Edit",
@@ -21,15 +21,15 @@ export const en = {
   },
   home: {
     badge: "TACOS PARAÍSO JOURNAL",
-    heroNote: "Small notes, big tortillas.",
+    heroNote: "Taco encounters, lightly logged.",
     description:
-      "A small shared notebook for you and a few friends to record Mexican taco spots.",
+      "A small private log for taco places you and your people want to remember.",
     recent: "Recently visited",
     viewAll: "View visited places",
     empty: "No visited places have been added yet.",
   },
   restaurants: {
-    kicker: "Field Notes",
+    kicker: "TACO ENCOUNTERS",
     title: "Visited Places",
     sortNewest: "Newest",
     sortRating: "Top rated",
@@ -55,7 +55,7 @@ export const en = {
     deleteConfirm: "Delete this restaurant record?",
   },
   wishlist: {
-    kicker: "Next taco trip",
+    kicker: "NEXT TACO STOP",
     title: "Want to Visit",
     description: "A short list of places to keep in mind for the next taco outing.",
     empty: "No places have been added yet.",
