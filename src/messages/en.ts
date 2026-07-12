@@ -1,5 +1,6 @@
 export const en = {
   common: {
+    home: "TOP",
     languageJa: "日本語",
     languageEn: "English",
     restaurants: "Visited Places",
