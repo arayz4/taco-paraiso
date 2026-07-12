@@ -68,6 +68,18 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
+      <section className="mt-6">
+        <Link
+          href={`/${locale}/members`}
+          className="group flex flex-col gap-2 border-y border-[#3c2b2b]/10 py-4 text-[#3c2b2b] transition hover:border-[#277c70]/40 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <span className="text-sm font-semibold text-[#654843]">{messages.home.membersText}</span>
+          <span className="section-kicker text-xs font-black uppercase text-[#277c70] transition group-hover:text-[#1d665c]">
+            {messages.home.membersLink}
+          </span>
+        </Link>
+      </section>
+
       <section className="mt-14 space-y-6 sm:mt-20">
         <div className="flex items-center justify-between gap-3">
           <h2 className="text-2xl font-black text-[#2c1c25]">

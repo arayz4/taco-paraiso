@@ -24,9 +24,49 @@ export const ja = {
     heroNote: "Taco encounters, lightly logged.",
     description:
       "仲間内で、タコスに出会ったお店をゆるく残していく、めもめもめもりー。",
+    membersLink: "仲間を見る",
+    membersText: "このログを育てている小さなメンバー紹介。",
     recent: "最近食べたお店",
     viewAll: "食べたお店を見る",
     empty: "まだ食べたお店が登録されていません。",
+  },
+  members: {
+    kicker: "INNER CIRCLE",
+    title: "仲間たち",
+    description: "タコパライソを一緒に育てる、だいたい5人くらいのタコス好き。",
+    favoriteLabel: "好きな感じ",
+    members: [
+      {
+        name: "Ami",
+        role: "気になる店を見つける人",
+        favorite: "カラフルな皿、明るい店、サルサ多め",
+        note: "街を歩いていて、よさそうなお店を見つけるのが早い。",
+      },
+      {
+        name: "Ren",
+        role: "味のメモ係",
+        favorite: "香ばしい肉、ライム、辛すぎないソース",
+        note: "一口目の印象をちゃんと覚えているタイプ。",
+      },
+      {
+        name: "Mina",
+        role: "雰囲気チェック係",
+        favorite: "デート向き、友だち向き、居心地のいい席",
+        note: "お店の空気感を言葉にするのがうまい。",
+      },
+      {
+        name: "Sota",
+        role: "写真を残す人",
+        favorite: "湯気、断面、テーブルの色",
+        note: "食べる前に一枚だけ、でもちゃんといい写真を撮る。",
+      },
+      {
+        name: "Yui",
+        role: "次のお店を決める人",
+        favorite: "行きたいリスト、地図、週末の予定",
+        note: "次どこ行く？を自然に進めてくれる。",
+      },
+    ],
   },
   restaurants: {
     kicker: "TACO ENCOUNTERS",

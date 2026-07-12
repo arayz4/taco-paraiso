@@ -24,9 +24,49 @@ export const en = {
     heroNote: "Taco encounters, lightly logged.",
     description:
       "A small inner-circle log for taco places worth remembering.",
+    membersLink: "Meet the circle",
+    membersText: "A quiet little intro to the people behind this log.",
     recent: "Recently visited",
     viewAll: "View visited places",
     empty: "No visited places have been added yet.",
+  },
+  members: {
+    kicker: "INNER CIRCLE",
+    title: "The Circle",
+    description: "Around five taco people keeping Tacos Paraíso alive, softly and casually.",
+    favoriteLabel: "Their lane",
+    members: [
+      {
+        name: "Ami",
+        role: "Finds the next place",
+        favorite: "Colorful plates, bright rooms, extra salsa",
+        note: "Spots promising places while everyone else is still walking.",
+      },
+      {
+        name: "Ren",
+        role: "Keeps the taste notes",
+        favorite: "Charred meat, lime, sauces with a clean kick",
+        note: "Remembers the first bite better than anyone.",
+      },
+      {
+        name: "Mina",
+        role: "Reads the atmosphere",
+        favorite: "Date spots, friend spots, comfortable seats",
+        note: "Turns the mood of a place into a useful little sentence.",
+      },
+      {
+        name: "Sota",
+        role: "Takes the photos",
+        favorite: "Steam, cross-sections, table color",
+        note: "Takes one photo before eating, and somehow it is the right one.",
+      },
+      {
+        name: "Yui",
+        role: "Plans the next stop",
+        favorite: "Wishlists, maps, weekend timing",
+        note: "Makes the next taco plan happen without making it a project.",
+      },
+    ],
   },
   restaurants: {
     kicker: "TACO ENCOUNTERS",
