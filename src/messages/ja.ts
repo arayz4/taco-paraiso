@@ -54,7 +54,7 @@ export const ja = {
         note: "味の印象を短く残すのがうまい。だいたい信頼できる。",
       },
       {
-        name: "Bin-chan",
+        name: "Ming-chan",
         role: "ムード担当",
         favorite: "居心地、照明、長居できるテーブル",
         note: "うまいだけじゃなく、また来たくなる空気を見ている。",

@@ -54,7 +54,7 @@ export const en = {
         note: "Good at turning a taste impression into one reliable line.",
       },
       {
-        name: "Bin-chan",
+        name: "Ming-chan",
         role: "Mood desk",
         favorite: "Comfort, lighting, tables worth staying at",
         note: "Looks for the reason a place feels like somewhere to return to.",
