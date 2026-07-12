@@ -13,6 +13,7 @@ const swatches = [
   "from-[#ed6d9a] via-[#ba4d6e] to-[#70395c]",
   "from-[#ffd166] via-[#7fd7c7] to-[#277c70]",
   "from-[#f08a4b] via-[#e35f50] to-[#ba4d6e]",
+  "from-[#7fd7c7] via-[#f6bd45] to-[#e35f50]",
 ];
 
 export default async function MembersPage({ params }: Props) {
